@@ -1,0 +1,443 @@
+# AGENTS.md
+
+> **Important:** This is a template for AGENTS.md. Replace all placeholders in curly braces `{...}` with actual values for your project.
+
+---
+
+## 📝 Example of a Filled AGENTS.md
+
+Below is a brief example of what a filled AGENTS.md file should look like. Use it as a reference when filling out the template.
+
+```markdown
+# AGENTS.md
+
+## Project Overview
+
+### Purpose
+
+**TaskManager** is a REST API for task and project management.
+The library provides CRUD operations, a notification system, and calendar integration.
+
+### Main Components
+
+#### Header Files (`include/taskmanager/`)
+
+| File | Purpose |
+|------|---------|
+| [`task.hpp`](include/taskmanager/task.hpp) | Task class for representing tasks |
+| [`project.hpp`](include/taskmanager/project.hpp) | Project class for grouping tasks |
+| [`api.hpp`](include/taskmanager/api.hpp) | REST API endpoints |
+
+#### Source Files (`src/taskmanager/`)
+
+| File | Implementation |
+|------|----------------|
+| [`task.cpp`](src/taskmanager/task.cpp) | Task management logic |
+| [`project.cpp`](src/taskmanager/project.cpp) | Project management |
+| [`api.cpp`](src/taskmanager/api.cpp) | API endpoints implementation |
+
+## Technology Stack
+
+### C++ Standard and Features
+
+- **Standard:** C++20
+- **Compiler:** GCC 11+ or Clang 12+
+- **Features:**
+  - RAII for resource management
+  - Smart pointers (std::unique_ptr, std::shared_ptr)
+  - STL containers and algorithms
+
+### CMake Configuration
+
+- **Minimum version:** CMake 3.15+
+- **Build system:** Modern CMake with target-based approach
+- **Main targets:**
+  - `taskmanager` — main library
+  - `taskmanager_tests` — tests
+
+**Build example:**
+
+```bash
+mkdir build && cd build
+cmake .. -DCMAKE_BUILD_TYPE=Release
+cmake --build .
+```
+```
+
+---
+
+## 🔍 How to Check Placeholder Completion
+
+### Command to Find All Placeholders
+
+After filling out the template, run the following command to ensure all placeholders are replaced:
+
+```bash
+# For Linux/macOS
+grep -r '{' AGENTS.md | grep -v '//' | grep -v '```' | grep -E '\{[A-Z_]+\}'
+
+# For Windows (PowerShell)
+Select-String -Path AGENTS.md -Pattern '\{[A-Z_]+\}' | Where-Object { $_.Line -notmatch '//' -and $_.Line -notmatch '```' }
+```
+
+If the command outputs nothing — all placeholders are replaced! ✅
+
+---
+
+## 📋 AGENTS.md Template
+
+## Project Overview
+
+### Purpose
+
+**{PROJECT_NAME}** is {PROJECT_DESCRIPTION}. {ADDITIONAL_DETAILS}.
+
+**Example values:**
+- `{PROJECT_NAME}` → `MyAwesomeProject`, `TaskManager`, `DataPipeline`
+- `{PROJECT_DESCRIPTION}` → `REST API for task management`, `data processing library`, `machine learning framework`
+- `{ADDITIONAL_DETAILS}` → `The library provides CRUD operations and integration with external services`, `Supports various data formats and parallel processing`
+
+### Main Components
+
+#### {COMPONENT_TYPE_1} (`{DIRECTORY_1}/`)
+
+| File | Purpose |
+|------|---------|
+| [`{FILE_1}`]({DIRECTORY_1}/{FILE_1}) | {FILE_1_DESCRIPTION} |
+| [`{FILE_2}`]({DIRECTORY_1}/{FILE_2}) | {FILE_2_DESCRIPTION} |
+| [`{FILE_3}`]({DIRECTORY_1}/{FILE_3}) | {FILE_3_DESCRIPTION} |
+
+**Example values:**
+- `{COMPONENT_TYPE_1}` → `Header Files`, `Source Files`, `Modules`, `Components`
+- `{DIRECTORY_1}` → `include/myproject/`, `src/`, `lib/`, `components/`
+- `{FILE_1}` → `api.hpp`, `main.cpp`, `utils.py`, `index.ts`
+- `{FILE_1_DESCRIPTION}` → `API class for handling HTTP requests`, `Main application entry point`, `Utilities for data processing`
+
+#### {COMPONENT_TYPE_2} (`{DIRECTORY_2}/`)
+
+| File | Implementation |
+|------|----------------|
+| [`{FILE_4}`]({DIRECTORY_2}/{FILE_4}) | {FILE_4_DESCRIPTION} |
+| [`{FILE_5}`]({DIRECTORY_2}/{FILE_5}) | {FILE_5_DESCRIPTION} |
+
+#### Tests (`{TESTS_DIRECTORY}/`)
+
+- [`{TEST_FILE_1}`]({TESTS_DIRECTORY}/{TEST_FILE_1}) — {TEST_1_DESCRIPTION}
+- [`{TEST_FILE_2}`]({TESTS_DIRECTORY}/{TEST_FILE_2}) — {TEST_2_DESCRIPTION}
+- [`{TEST_FILE_3}`]({TESTS_DIRECTORY}/{TEST_FILE_3}) — {TEST_3_DESCRIPTION}
+
+**Example values:**
+- `{TESTS_DIRECTORY}` → `tests/`, `test/`, `__tests__/`, `spec/`
+- `{TEST_FILE_1}` → `test_api.cpp`, `user.test.ts`, `test_utils.py`
+- `{TEST_1_DESCRIPTION}` → `API endpoint tests`, `data validation checks`
+
+#### Examples (`{EXAMPLES_DIRECTORY}/`)
+
+- [`{EXAMPLE_1}/`]({EXAMPLES_DIRECTORY}/{EXAMPLE_1}/) — {EXAMPLE_1_DESCRIPTION}
+- [`{EXAMPLE_2}/`]({EXAMPLES_DIRECTORY}/{EXAMPLE_2}/) — {EXAMPLE_2_DESCRIPTION}
+
+**Example values:**
+- `{EXAMPLES_DIRECTORY}` → `examples/`, `samples/`, `demos/`
+- `{EXAMPLE_1}` → `simple_usage`, `advanced_example`, `tutorial`
+- `{EXAMPLE_1_DESCRIPTION}` → `simple library usage example`, `advanced example with configuration`
+
+#### Additional Configuration Files
+
+| File/Directory | Purpose |
+|----------------|---------|
+| [`{CONFIG_FILE_1}`]({CONFIG_FILE_1}) | {CONFIG_1_DESCRIPTION} |
+| [`{CONFIG_FILE_2}`]({CONFIG_FILE_2}) | {CONFIG_2_DESCRIPTION} |
+| [`{DOCKERFILE}`]({DOCKERFILE}) | Docker image for development |
+| [`.devcontainer/`](.devcontainer/) | VS Code Dev Container configuration |
+| [`.{PLATFORM}/`](.{PLATFORM}/) | {PLATFORM} Actions configuration |
+| [`.gitignore`](.gitignore) | Git exclusion rules |
+| [`LICENSE`](LICENSE) | Project license |
+
+**Example values:**
+- `{CONFIG_FILE_1}` → `CMakeLists.txt`, `package.json`, `pyproject.toml`, `Cargo.toml`
+- `{CONFIG_1_DESCRIPTION}` → `Main CMake build file`, `npm packages configuration`, `Python project settings`
+- `{DOCKERFILE}` → `Dockerfile`
+- `{PLATFORM}` → `github`, `gitlab`, `bitbucket`
+
+---
+
+## Technology Stack
+
+### {LANGUAGE} Standard and Features
+
+- **Standard:** {LANGUAGE_VERSION}
+- **Compiler:** {COMPILER_REQUIREMENTS}
+- **Features:**
+  - {FEATURE_1}
+  - {FEATURE_2}
+  - {FEATURE_3}
+
+**Example values:**
+- `{LANGUAGE}` → `C++`, `Python`, `TypeScript`, `Rust`, `Go`
+- `{LANGUAGE_VERSION}` → `C++23`, `Python 3.11`, `TypeScript 5.0`, `Rust 1.70`
+- `{COMPILER_REQUIREMENTS}` → `GCC 11+ or Clang 12+ with C++23 support`, `CPython 3.11+`, `Node.js 20+`
+- `{FEATURE_1}` → `RAII for resource management`, `Type hints`, `Decorators`, `Smart pointers`
+
+### {BUILD_SYSTEM} Configuration
+
+- **Minimum version:** {BUILD_SYSTEM_MIN_VERSION}
+- **Build system:** {BUILD_SYSTEM_DESCRIPTION}
+- **Main targets:**
+  - `{TARGET_1}` — {TARGET_1_DESCRIPTION}
+  - `{TARGET_2}` — {TARGET_2_DESCRIPTION}
+  - `{TARGET_3}` — {TARGET_3_DESCRIPTION}
+
+**Build example:**
+
+```bash
+{BUILD_COMMANDS}
+```
+
+**Example values:**
+- `{BUILD_SYSTEM}` → `CMake`, `npm`, `Cargo`, `Maven`, `Gradle`, `pip`
+- `{BUILD_SYSTEM_MIN_VERSION}` → `3.15+`, `9.0+`, `1.70+`
+- `{BUILD_SYSTEM_DESCRIPTION}` → `Modern CMake with target-based approach`, `npm with workspace support`
+- `{TARGET_1}` → `myproject`, `myproject_tests`, `myproject_examples`
+- `{TARGET_1_DESCRIPTION}` → `main library`, `tests`, `usage examples`
+- `{BUILD_COMMANDS}` → `mkdir build && cd build && cmake .. && make`, `npm install && npm run build`
+
+### {MAIN_LIBRARY}
+
+- **Version:** {LIBRARY_VERSION}
+- **Purpose:** {LIBRARY_PURPOSE}
+- **Integration:** {LIBRARY_INTEGRATION_METHOD}
+
+**Configuration example:**
+
+```{CONFIG_FORMAT}
+{CONFIG_EXAMPLE}
+```
+
+**Example values:**
+- `{MAIN_LIBRARY}` → `yaml-cpp`, `React`, `tokio`, `pandas`, `axios`
+- `{LIBRARY_VERSION}` → `0.7.0+`, `^18.0.0`, `1.0`, `latest`
+- `{LIBRARY_PURPOSE}` → `Parsing YAML configurations`, `UI library`, `Async runtime`
+- `{LIBRARY_INTEGRATION_METHOD}` → `Via CMake with three fallback methods`, `Via npm install`, `Via Cargo.toml`
+- `{CONFIG_FORMAT}` → `yaml`, `json`, `toml`, `xml`
+- `{CONFIG_EXAMPLE}` → `key: value\nlist:\n  - item1\n  - item2`
+
+### Testing Framework
+
+- **Framework:** {TEST_FRAMEWORK}
+- **Running tests:**
+  ```bash
+  {TEST_COMMAND}
+  ```
+- **Coverage:** {COVERAGE_DESCRIPTION}
+
+**Example values:**
+- `{TEST_FRAMEWORK}` → `Google Test`, `pytest`, `Jest`, `Vitest`, `cargo test`
+- `{TEST_COMMAND}` → `cd build && ctest --output-on-failure`, `pytest tests/ -v`, `npm test`, `cargo test`
+- `{COVERAGE_DESCRIPTION}` → `Unit tests for each component + integration tests`, `Coverage >80%`, `Unit and E2E tests`
+
+### Linters and Code Quality Tools
+
+| Tool | Purpose |
+|------|---------|
+| **{LINTER_1}** | {LINTER_1_PURPOSE} |
+| **{LINTER_2}** | {LINTER_2_PURPOSE} |
+| **{LINTER_3}** | {LINTER_3_PURPOSE} |
+| **{LINTER_4}** | {LINTER_4_PURPOSE} |
+
+**Recommended {LINTER_1} checks:**
+
+```bash
+{LINTER_1_COMMAND}
+```
+
+**Example values:**
+- `{LINTER_1}` → `clang-tidy`, `eslint`, `ruff`, `mypy`, `clippy`
+- `{LINTER_1_PURPOSE}` → `Static code analysis`, `JavaScript/TypeScript linting`, `Fast Python linter`
+- `{LINTER_1_COMMAND}` → `clang-tidy src/**/*.cpp -- -Iinclude/ -std=c++23`, `eslint src/ --ext .js,.ts`, `ruff check .`
+
+### Linter Configuration Files
+
+The project has linter configuration files in the root directory:
+
+#### .{LINTER_1_CONFIG}
+```{LINTER_1_CONFIG_FORMAT}
+{LINTER_1_CONFIG_CONTENT}
+```
+
+#### .{LINTER_2_CONFIG}
+```{LINTER_2_CONFIG_FORMAT}
+{LINTER_2_CONFIG_CONTENT}
+```
+
+#### .{LINTER_3_CONFIG}
+```{LINTER_3_CONFIG_FORMAT}
+{LINTER_3_CONFIG_CONTENT}
+```
+
+**Example values:**
+- `{LINTER_1_CONFIG}` → `clang-tidy`, `eslintrc`, `ruff.toml`
+- `{LINTER_1_CONFIG_FORMAT}` → `yaml`, `json`, `toml`
+- `{LINTER_1_CONFIG_CONTENT}` → `Checks: 'bugprone-*,cert-*'\nWarningsAsErrors: ''`
+
+### CI/CD for Linters
+
+The project has automatic linter execution via {PLATFORM}:
+- File: [`.{PLATFORM}/workflows/{WORKFLOW_FILE}`](.{PLATFORM}/workflows/{WORKFLOW_FILE})
+- Triggers: {TRIGGER_DESCRIPTION}
+- Checks performed:
+  - `{CHECK_1}` — {CHECK_1_DESCRIPTION}
+  - `{CHECK_2}` — {CHECK_2_DESCRIPTION}
+  - `{CHECK_3}` — {CHECK_3_DESCRIPTION}
+
+**Example values:**
+- `{PLATFORM}` → `GitHub`, `GitLab`, `Bitbucket`
+- `{WORKFLOW_FILE}` → `linters.yml`, `ci.yml`, `quality.yml`
+- `{TRIGGER_DESCRIPTION}` → `push and pull request to main and develop branches`, `every commit`
+- `{CHECK_1}` → `clang-tidy-check`, `eslint-check`, `ruff-check`
+- `{CHECK_1_DESCRIPTION}` → `static code analysis`, `code style check`
+
+---
+
+## Additional Resources
+
+### Internal Documentation
+
+- [`README.md`](README.md) — general project description
+- [`{DOC_1}`]({DOC_1}) — {DOC_1_DESCRIPTION}
+- [`{DOC_2}`]({DOC_2}) — {DOC_2_DESCRIPTION}
+- [`{DOC_3}`]({DOC_3}) — {DOC_3_DESCRIPTION}
+- [`{DOC_4}`]({DOC_4}) — {DOC_4_DESCRIPTION}
+
+**Example values:**
+- `{DOC_1}` → `docs/architecture.md`, `docs/api.md`, `docs/guide.md`
+- `{DOC_1_DESCRIPTION}` → `project architecture`, `API reference`, `developer guide`
+
+### External Resources
+
+- [{RESOURCE_1}]({RESOURCE_1_URL}) — {RESOURCE_1_DESCRIPTION}
+- [{RESOURCE_2}]({RESOURCE_2_URL}) — {RESOURCE_2_DESCRIPTION}
+- [{RESOURCE_3}]({RESOURCE_3_URL}) — {RESOURCE_3_DESCRIPTION}
+- [{RESOURCE_4}]({RESOURCE_4_URL}) — {RESOURCE_4_DESCRIPTION}
+
+**Example values:**
+- `{RESOURCE_1}` → `CMake Documentation`, `Python docs`, `React docs`
+- `{RESOURCE_1_URL}` → `https://cmake.org/documentation/`, `https://docs.python.org/`
+- `{RESOURCE_1_DESCRIPTION}` → `CMake documentation`, `Python documentation`
+
+---
+
+## Quick Reference
+
+### Quick Start
+
+```bash
+# Build project
+{BUILD_STEPS}
+
+# Run tests
+{TEST_STEPS}
+
+# Run linters
+{LINTER_STEPS}
+```
+
+**Example values:**
+- `{BUILD_STEPS}` → `mkdir build && cd build && cmake .. && make`
+- `{TEST_STEPS}` → `pytest tests/ -v`, `npm test`, `cargo test`
+- `{LINTER_STEPS}` → `clang-tidy src/**/*.cpp -- -Iinclude/`, `eslint src/`, `ruff check .`
+
+### Typical Workflow
+
+```bash
+# 1. Create branch
+git checkout -b feature/my-feature
+
+# 2. Make changes
+# ... code ...
+
+# 3. Check with linters
+{LINTER_CHECK_COMMAND}
+
+# 4. Run tests
+{TEST_RUN_COMMAND}
+
+# 5. Commit
+git add .
+git commit -m "feat: add my feature"
+
+# 6. Repeat for subtasks
+# ...
+
+# 7. Review
+git diff main..feature/my-feature
+
+# 8. Merge sub-branches
+git merge feature/sub-task-1
+```
+
+**Example values:**
+- `{LINTER_CHECK_COMMAND}` → `clang-tidy src/**/*.cpp -- -Iinclude/`, `eslint src/ --fix`
+- `{TEST_RUN_COMMAND}` → `pytest tests/ -v`, `npm test`, `cargo test`
+
+---
+
+## 📚 Additional Sections (Optional)
+
+You can add the following sections as needed:
+
+### Architecture
+
+Project architecture description:
+- Components and their interactions
+- Diagrams (can use Mermaid)
+- Data flows
+
+### Contributing
+
+Contributor guidelines:
+- How to start development
+- How to create pull requests
+- Code review process
+
+### Changelog
+
+Change history:
+- Versions and their dates
+- Added features
+- Fixed bugs
+- Breaking changes
+
+### Troubleshooting
+
+Solutions to common problems:
+- Build errors
+- Test errors
+- Dependency issues
+
+---
+
+## ✅ Post-Fill Checklist
+
+After filling out the template, ensure:
+
+- [ ] ✅ All placeholders `{...}` are replaced
+- [ ] ✅ All file paths are correct
+- [ ] ✅ Commands work in your project
+- [ ] ✅ Documentation links point to existing files
+- [ ] ✅ Library versions are current
+- [ ] ✅ Document language is consistent (choose one: Russian or English)
+- [ ] ✅ Code examples are correct and match your project
+
+### Final Check Command
+
+```bash
+# Search for remaining placeholders
+grep -E '\{[A-Z_]+\}' AGENTS.md || echo "✅ All placeholders replaced!"
+
+# Check file links (for Linux)
+find . -name "*.md" -o -name "*.cpp" -o -name "*.hpp" | head -20
+```
+
+---
+
+**Note:** This template is based on AGENTS.md from the FSMConfig project and adapted for universal use. You can delete or add sections depending on your project's needs.
